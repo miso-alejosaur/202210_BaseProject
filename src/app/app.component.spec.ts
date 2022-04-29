@@ -25,22 +25,22 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('base-project');
   });
 
-  it('table should have a plant list', () => {
+  it('should have a plant list', () => {
     const fixture = TestBed.createComponent(AppComponent);
     expect(fixture.debugElement.query(By.css('app-plant-list'))).toBeTruthy();
   });
 
-  it('table should have a footer', () => {
+  it('should have a footer', () => {
     const fixture = TestBed.createComponent(AppComponent);
     expect(fixture.debugElement.query(By.css('footer'))).toBeTruthy();
   });
 
-  it('table should have a title', () => {
+  it('should have a title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     expect(fixture.debugElement.query(By.css('.title'))).toBeTruthy();
   });
 
-  it('table should have a header img', () => {
+  it('should have a header img', () => {
     const fixture = TestBed.createComponent(AppComponent);
     expect(fixture.debugElement.query(By.css('.header-img'))).toBeTruthy();
   });

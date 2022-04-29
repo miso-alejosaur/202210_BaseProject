@@ -1,3 +1,14 @@
-* [lang^=en] {
-  color: green;
+hr {
+  opacity: 60%;
+}
+
+.title{
+  font-family: 'Kaisei Decol', serif;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 3rem;
+}
+
+.header-img {
+  width: 100%;
 }

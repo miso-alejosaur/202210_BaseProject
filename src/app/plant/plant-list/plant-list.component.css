@@ -1,0 +1,13 @@
+th{
+  background-color: #333a40;
+}
+
+tr {
+  border-top: 2px solid #eaeaea;
+}
+
+.plants {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.3rem;
+  width: 60%;
+}

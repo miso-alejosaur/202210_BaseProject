@@ -1,12 +1,15 @@
+import { HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { PlantListComponent } from './plant/plant-list/plant-list.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      declarations: [AppComponent],
+      imports: [RouterTestingModule, HttpClientModule],
+      declarations: [AppComponent, PlantListComponent],
     }).compileComponents();
   });
 
@@ -22,12 +25,23 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('base-project');
   });
 
-  it('should render title', () => {
+  it('table should have a plant list', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain(
-      'base-project app is running!'
-    );
+    expect(fixture.debugElement.query(By.css('app-plant-list'))).toBeTruthy();
+  });
+
+  it('table should have a footer', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    expect(fixture.debugElement.query(By.css('footer'))).toBeTruthy();
+  });
+
+  it('table should have a title', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    expect(fixture.debugElement.query(By.css('.title'))).toBeTruthy();
+  });
+
+  it('table should have a header img', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    expect(fixture.debugElement.query(By.css('.header-img'))).toBeTruthy();
   });
 });
